@@ -5,18 +5,19 @@
     <meta charset="utf8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <link href="<%= root_path %>stylesheets/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+    <% dynamic_asset = Rails.env.development? ? root_path : '//s3.amazonaws.com/powr-sidekiq-assets' %>
+    <link href="<%= dynamic_asset %>/stylesheets/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
     <% if rtl? %>
-    <link href="<%= root_path %>stylesheets/bootstrap-rtl.min.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="<%= dynamic_asset %>/stylesheets/bootstrap-rtl.min.css" media="screen" rel="stylesheet" type="text/css"/>
     <% end %>
 
-    <link href="<%= root_path %>stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<%= dynamic_asset %>/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
     <% if rtl? %>
-    <link href="<%= root_path %>stylesheets/application-rtl.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<%= dynamic_asset %>/stylesheets/application-rtl.css" media="screen" rel="stylesheet" type="text/css" />
     <% end %>
 
-    <link rel="shortcut icon" type="image/ico" href="<%= root_path %>images/favicon.ico" />
-    <script type="text/javascript" src="<%= root_path %>javascripts/application.js"></script>
+    <link rel="shortcut icon" type="image/ico" href="<%= dynamic_asset %>/images/favicon.ico" />
+    <script type="text/javascript" src="<%= dynamic_asset %>/javascripts/application.js"></script>
     <meta name="google" content="notranslate" />
     <%= display_custom_head %>
   </head>
