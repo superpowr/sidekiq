@@ -4,20 +4,18 @@
     <title><%= environment_title_prefix %><%= Sidekiq::NAME %></title>
     <meta charset="utf8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-
-    <% dynamic_asset = Rails.env.development? ? root_path : '//s3.amazonaws.com/powr-sidekiq-assets' %>
-    <link href="<%= dynamic_asset %>/stylesheets/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="//s3.amazonaws.com/powr-sidekiq-assets/stylesheets/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
     <% if rtl? %>
-    <link href="<%= dynamic_asset %>/stylesheets/bootstrap-rtl.min.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="//s3.amazonaws.com/powr-sidekiq-assets/stylesheets/bootstrap-rtl.min.css" media="screen" rel="stylesheet" type="text/css"/>
     <% end %>
 
-    <link href="<%= dynamic_asset %>/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="//s3.amazonaws.com/powr-sidekiq-assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
     <% if rtl? %>
-    <link href="<%= dynamic_asset %>/stylesheets/application-rtl.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="//s3.amazonaws.com/powr-sidekiq-assets/stylesheets/application-rtl.css" media="screen" rel="stylesheet" type="text/css" />
     <% end %>
 
-    <link rel="shortcut icon" type="image/ico" href="<%= dynamic_asset %>/images/favicon.ico" />
-    <script type="text/javascript" src="<%= dynamic_asset %>/javascripts/application.js"></script>
+    <link rel="shortcut icon" type="image/ico" href="//s3.amazonaws.com/powr-sidekiq-assets/images/favicon.ico" />
+    <script type="text/javascript" src="//s3.amazonaws.com/powr-sidekiq-assets/javascripts/application.js"></script>
     <meta name="google" content="notranslate" />
     <%= display_custom_head %>
   </head>
