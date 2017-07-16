@@ -79,7 +79,7 @@ module Sidekiq
 
     def root_path
       # "#{env['SCRIPT_NAME']}/"
-      '//s3.amazonaws.com/powr-sidekiq-assets/'
+      'https://s3.amazonaws.com/powr-sidekiq-assets/2-x/'
     end
 
     def current_path
